@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dallas Rent vs Buy Calculator 2026 | Mortgage Cost Tool</title>
+<meta name="description" content="Calculate mortgage costs vs renting in Dallas TX. Full amortization table, break-even analysis, and 2026 market data.">
+<link rel="canonical" href="https://dallasmortgagecalculator.com/">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Dallas Rent vs Buy Calculator 2026 | Mortgage Cost Tool">
+<meta property="og:description" content="Calculate mortgage costs vs renting in Dallas TX. Full amortization table, break-even analysis, and 2026 market data.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dallasmortgagecalculator.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is it cheaper to rent or buy in Dallas in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your timeline and financial situation. Buying typically becomes cheaper than renting in Dallas after 4-6 years due to equity building and fixed mortgage payments, while rents increase annually by 3-5%. Use the calculator above to compare your specific scenario."}},
+    {"@type": "Question", "name": "What is the average mortgage payment in Dallas?", "acceptedAnswer": {"@type": "Answer", "text": "As of 2026, the average monthly mortgage payment in Dallas is approximately $2,100-$2,400 for a median-priced home of $350,000 with a 20% down payment at current interest rates, including property taxes and insurance."}},
+    {"@type": "Question", "name": "What is the property tax rate in Dallas, Texas?", "acceptedAnswer": {"@type": "Answer", "text": "Dallas County property tax rates range from 1.8% to 2.3% of assessed value depending on the specific taxing jurisdictions. The average effective rate is approximately 2.0%, which is higher than the national average of 1.1%."}},
+    {"@type": "Question", "name": "How much do you need for a down payment in Dallas?", "acceptedAnswer": {"@type": "Answer", "text": "Conventional loans in Dallas typically require 5-20% down. FHA loans require as little as 3.5%. For a $350,000 home, that ranges from $12,250 (FHA) to $70,000 (20% conventional). A 20% down payment eliminates PMI, saving $150-$250 monthly."}},
+    {"@type": "Question", "name": "Is Dallas a good place to buy a home in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Dallas remains one of the top U.S. metros for homebuying due to strong job growth, no state income tax, relatively affordable median prices compared to coastal cities, and consistent 3-5% annual appreciation. Population growth continues to fuel demand."}},
+    {"@type": "Question", "name": "What is the break-even point for buying vs renting in Dallas?", "acceptedAnswer": {"@type": "Answer", "text": "The typical break-even point in Dallas is 4-6 years. Before this point, transaction costs and early mortgage interest make renting more economical. After this point, equity accumulation and fixed payments make buying the better financial choice."}},
+    {"@type": "Question", "name": "What are closing costs in Dallas, Texas?", "acceptedAnswer": {"@type": "Answer", "text": "Closing costs in Dallas typically range from 2-5% of the purchase price. For a $350,000 home, expect $7,000-$17,500 in closing costs including title insurance, appraisal fees, lender fees, and prepaid property taxes."}},
+    {"@type": "Question", "name": "Does Dallas have a homestead exemption?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Texas offers a mandatory $100,000 homestead exemption for school district taxes. Dallas County and the City of Dallas offer additional exemptions. These can reduce your taxable value significantly, lowering annual property tax bills by $1,500-$3,000 or more."}}
+  ]
+}
+</script>
+</head>
+<body>
+<header>
+<div class="container">
+<h1>Rent vs Buy in Dallas (2026) – Real Cost Calculator</h1>
+<p>Free mortgage calculator with amortization table, break-even analysis, and Dallas-specific market data to help you make the right housing decision.</p>
+</div>
+</header>
+
+<main class="container" role="main">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> &raquo; Dallas Rent vs Buy Calculator</nav>
+
+<!-- Ad Slot Top -->
+<div class="ad-slot" aria-hidden="true">Ad Slot — Top of Page</div>
+
+<section class="card" aria-labelledby="calc-heading">
+<h2 id="calc-heading" class="section-title">Dallas Mortgage & Rent vs Buy Calculator</h2>
+<form id="calcForm" novalidate autocomplete="off">
+<div class="calc-grid">
+<div class="form-group">
+<label for="loanAmount">Loan Amount ($) <span aria-hidden="true" style="color:var(--error)">*</span></label>
+<input type="number" id="loanAmount" min="1000" max="10000000" step="1000" value="280000" placeholder="e.g. 280000" required aria-required="true">
+<span class="error-msg" id="loanAmountError" role="alert"></span>
+</div>
+<div class="form-group">
+<label for="interestRate">Interest Rate (%) <span aria-hidden="true" style="color:var(--error)">*</span></label>
+<input type="number" id="interestRate" min="0" max="25" step="0.01" value="6.75" placeholder="e.g. 6.75" required aria-required="true">
+<span class="error-msg" id="interestRateError" role="alert"></span>
+</div>
+<div class="form-group">
+<label for="loanTerm">Loan Term (years) <span aria-hidden="true" style="color:var(--error)">*</span></label>
+<input type="number" id="loanTerm" min="1" max="50" step="1" value="30" placeholder="e.g. 30" required aria-required="true">
+<span class="error-msg" id="loanTermError" role="alert"></span>
+</div>
+<div class="form-group">
+<label for="extraPayment">Extra Monthly Payment ($)</label>
+<input type="number" id="extraPayment" min="0" max="1000000" step="50" value="0" placeholder="0">
+<span class="error-msg" id="extraPaymentError" role="alert"></span>
+</div>
+<div class="form-group">
+<label for="propertyTax">Annual Property Tax ($)</label>
+<input type="number" id="propertyTax" min="0" max="500000" step="100" value="5600" placeholder="e.g. 5600">
+<span class="error-msg" id="propertyTaxError" role="alert"></span>
+</div>
+<div class="form-group">
+<label for="insurance">Annual Insurance ($)</label>
+<input type="number" id="insurance" min="0" max="100000" step="50" value="1800" placeholder="e.g. 1800">
+<span class="error-msg" id="insuranceError" role="alert"></span>
+</div>
+</div>
+<div class="btn-group">
+<button type="submit" class="btn btn-primary" id="calcBtn">Calculate Mortgage</button>
+<button type="reset" class="btn btn-secondary" id="resetBtn">Reset</button>
+</div>
+</form>
+
+<div class="results-panel" id="resultsPanel">
+<h3 style="font-size:1.2rem;font-weight:700;margin-bottom:1rem;color:var(--primary)">Your Mortgage Results</h3>
+<div class="results-grid">
+<div class="result-card">
+<div class="label">Monthly Payment</div>
+<div class="value" id="resMonthly">—</div>
+</div>
+<div class="result-card">
+<div class="label">Total Interest Paid</div>
+<div class="value" id="resTotalInterest">—</div>
+</div>
+<div class="result-card">
+<div class="label">Total Payment</div>
+<div class="value" id="resTotalPayment">—</div>
+</div>
+</div>
+<div id="extraInfo" style="display:none;margin-top:1rem;padding:1rem;background:#f0fff4;border-radius:var(--radius);border:1px solid #c6f6d5">
+<p style="font-size:.9rem"><strong>With extra payments:</strong> You save <span id="resSaved" style="color:var(--success);font-weight:700"></span> in interest and pay off your loan <span id="resSavedMonths" style="color:var(--success);font-weight:700"></span> months early!</p>
+</div>
+<div class="btn-group">
+<button type="button" class="btn btn-secondary" id="downloadCsv">Download CSV</button>
+</div>
+<h4 style="margin-top:1.5rem;margin-bottom:.5rem;font-size:1.05rem;color:var(--primary)">Full Amortization Schedule</h4>
+<div class="table-wrap">
+<table id="amortTable" aria-label="Amortization Schedule">
+<thead>
+<tr><th>Month</th><th>Payment</th><th>Principal</th><th>Interest</th><th>Remaining Balance</th></tr>
+</thead>
+<tbody id="amortBody"></tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- Ad Slot Below Calculator -->
+<div class="ad-slot" aria-hidden="true">Ad Slot — Below Calculator</div>
+
+<section class="card content-section" aria-labelledby="how-works">
+<h2 id="how-works" class="section-title">How This Dallas Mortgage Calculator Works</h2>
+<p>This calculator uses the standard amortization formula to determine your fixed monthly mortgage payment based on the loan amount, annual interest rate, and term length. The formula applied is:</p>
+<p style="text-align:center;font-weight:700;padding:1rem;background:#f8fafc;border-radius:var(--radius);margin:1rem 0;font-size:.95rem">M = P × [r(1+r)<sup>n</sup>] / [(1+r)<sup>n</sup> – 1]</p>
+<p>Where <strong>M</strong> is the monthly payment, <strong>P</strong> is the principal loan amount, <strong>r</strong> is the monthly interest rate (annual rate divided by 12), and <strong>n</strong> is the total number of monthly payments. For a 0% interest rate, the calculator simply divides the principal by the number of months.</p>
+<p>The calculator also accounts for Dallas-specific costs including property taxes (averaging 2.0% of assessed value) and homeowners insurance. When you add optional extra monthly payments, the tool recalculates your payoff timeline and shows exactly how much interest you save over the life of the loan.</p>
+<p>Every row in the amortization table shows the precise breakdown between principal and interest for each monthly payment, letting you see how equity builds over time. Early payments are heavily weighted toward interest—in a typical Dallas mortgage at 6.75%, over 70% of your first payment goes to interest.</p>
+</section>
+
+<section class="card content-section" aria-labelledby="market-overview">
+<h2 id="market-overview" class="section-title">Dallas Housing Market Overview</h2>
+<p>The Dallas-Fort Worth metroplex remains one of the most dynamic real estate markets in the United States heading into 2026. Here are the key metrics every buyer and renter should understand:</p>
+<ul>
+<li><strong>Median Home Price:</strong> $350,000 (Dallas County, as of late 2025), up approximately 4.2% year-over-year</li>
+<li><strong>Average Monthly Rent (2-bedroom):</strong> $1,650–$1,850 depending on neighborhood and proximity to downtown</li>
+<li><strong>Property Tax Rate:</strong> 1.8%–2.3% of assessed value (average effective rate ~2.0%), significantly higher than the national average of 1.1%</li>
+<li><strong>Home Appreciation (5-year avg.):</strong> 4.5% annually, outpacing the national average of 3.8%</li>
+<li><strong>No State Income Tax:</strong> Texas has no personal state income tax, effectively increasing take-home pay by 4–8% compared to states like California or New York</li>
+<li><strong>Population Growth:</strong> DFW adds roughly 100,000–120,000 new residents annually, sustaining housing demand</li>
+<li><strong>Job Growth:</strong> Major employers including Toyota, Goldman Sachs, CBRE, and numerous tech firms continue expanding in Dallas, contributing to a 3.5% unemployment rate</li>
+<li><strong>Cost of Living Index:</strong> Dallas scores 102 on the COLI (national average = 100), making it affordable compared to other major metros like Austin (108), Denver (115), or San Francisco (170)</li>
+</ul>
+<p>Dallas benefits from a diverse economy spanning finance, technology, healthcare, logistics, and energy. This diversification protects against sector-specific downturns and supports steady property appreciation. The absence of state income tax means more income available for housing costs, which is a significant advantage when calculating rent vs buy scenarios.</p>
+<p>New construction in suburbs like Frisco, McKinney, Celina, and Prosper is expanding inventory, but urban infill development in neighborhoods like Deep Ellum, Bishop Arts, and the Design District remains competitive. Buyers in established neighborhoods like Lakewood, Lake Highlands, and Preston Hollow continue to see strong appreciation due to limited supply and excellent school ratings.</p>
+</section>
+
+<section class="card content-section" aria-labelledby="rent-buy-section">
+<h2 id="rent-buy-section" class="section-title">Renting vs Buying in Dallas: Pros & Cons</h2>
+<p>The rent vs buy decision in Dallas depends on your financial situation, timeline, and personal priorities. Below is a comprehensive comparison to help you evaluate both options.</p>
+
+<div class="rent-buy-compare">
+<div class="rbc-col" style="border-color:var(--primary-light)">
+<h3 style="color:var(--primary)">Monthly Cost: Buying</h3>
+<div class="cost-line"><span>Mortgage (P&I)</span><span>$1,816</span></div>
+<div class="cost-line"><span>Property Tax</span><span>$583</span></div>
+<div class="cost-line"><span>Insurance</span><span>$150</span></div>
+<div class="cost-line"><span>Maintenance</span><span>$290</span></div>
+<div class="cost-line"><span>Total Monthly</span><span>$2,839</span></div>
+</div>
+<div class="rbc-col" style="border-color:var(--accent)">
+<h3 style="color:var(--accent-dark)">Monthly Cost: Renting</h3>
+<div class="cost-line"><span>Rent (2BR avg.)</span><span>$1,750</span></div>
+<div class="cost-line"><span>Renters Insurance</span><span>$25</span></div>
+<div class="cost-line"><span>Utilities (est.)</span><span>$180</span></div>
+<div class="cost-line"><span>Maintenance</span><span>$0</span></div>
+<div class="cost-line"><span>Total Monthly</span><span>$1,955</span></div>
+</div>
+</div>
+
+<p>At first glance, renting appears cheaper by about $884 per month. However, this comparison doesn't account for equity building, tax benefits, appreciation, or rent increases over time. Let's break down the advantages and disadvantages:</p>
+
+<div class="pros-cons">
+<div class="col pros">
+<h3>✅ Pros of Buying in Dallas</h3>
+<ul>
+<li>Build equity with every payment (approximately $500/month in year one, growing each year)</li>
+<li>Fixed mortgage payments protect against inflation while rents increase 3–5% annually</li>
+<li>Dallas homes have appreciated 4.5% annually over the past five years</li>
+<li>Mortgage interest deduction available for itemizers (federal taxes)</li>
+<li>No state income tax means more disposable income for mortgage payments</li>
+<li>Homestead exemption reduces property tax burden by $2,000+ annually</li>
+<li>Freedom to renovate, customize, and improve your property</li>
+<li>Long-term wealth building—median homeowner net worth is 40x that of renters nationally</li>
+</ul>
+</div>
+<div class="col cons">
+<h3>❌ Cons of Buying in Dallas</h3>
+<ul>
+<li>High upfront costs: 20% down ($70,000) plus closing costs ($10,000–$17,500)</li>
+<li>Property taxes in Dallas County are among the highest in the nation (2.0% avg.)</li>
+<li>Maintenance costs average 1–2% of home value annually ($3,500–$7,000)</li>
+<li>Less flexibility to relocate quickly for career opportunities</li>
+<li>Market risk—home values can decline during economic downturns</li>
+<li>HOA fees in many Dallas suburbs add $100–$300 per month</li>
+<li>Opportunity cost of down payment capital not invested elsewhere</li>
+<li>Texas has no rent control, but also no cap on property tax increases</li>
+</ul>
+</div>
+</div>
+
+<div class="pros-cons" style="margin-top:0">
+<div class="col pros">
+<h3>✅ Pros of Renting in Dallas</h3>
+<ul>
+<li>Lower upfront costs—typically first month, last month, and security deposit</li>
+<li>No maintenance or repair expenses</li>
+<li>Flexibility to move for career changes or lifestyle preferences</li>
+<li>No exposure to property value declines or market corrections</li>
+<li>Access to amenities (pools, gyms, common areas) included in rent</li>
+<li>Invest the difference between rent and ownership costs in the stock market</li>
+</ul>
+</div>
+<div class="col cons">
+<h3>❌ Cons of Renting in Dallas</h3>
+<ul>
+<li>Rent increases: Dallas rents have risen 35% over the past five years</li>
+<li>No equity building—every payment goes to the landlord</li>
+<li>No tax benefits from rent payments</li>
+<li>Limited control over living space, renovations, and pets</li>
+<li>Lease restrictions and potential for non-renewal</li>
+<li>No benefit from home appreciation in a growing Dallas market</li>
+</ul>
+</div>
+</div>
+
+<table class="comparison-table">
+<thead><tr><th>Factor</th><th>Buying</th><th>Renting</th></tr></thead>
+<tbody>
+<tr><td>Monthly Cost (Year 1)</td><td>$2,839</td><td>$1,955</td></tr>
+<tr><td>Monthly Cost (Year 5)</td><td>$2,839 (fixed P&I)</td><td>~$2,270 (+3%/yr)</td></tr>
+<tr><td>Monthly Cost (Year 10)</td><td>$2,839 (fixed P&I)</td><td>~$2,630 (+3%/yr)</td></tr>
+<tr><td>Equity After 5 Years</td><td>~$38,000</td><td>$0</td></tr>
+<tr><td>Equity After 10 Years</td><td>~$91,000</td><td>$0</td></tr>
+<tr><td>Home Value After 10 Years (4.5% appreciation)</td><td>~$543,000</td><td>N/A</td></tr>
+<tr><td>Flexibility to Relocate</td><td>Low</td><td>High</td></tr>
+<tr><td>Upfront Costs</td><td>$80,000–$90,000</td><td>$3,500–$5,250</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- Ad Slot Mid Content -->
+<div class="ad-slot" aria-hidden="true">Ad Slot — Mid Content</div>
+
+<section class="card content-section" aria-labelledby="breakeven-section">
+<h2 id="breakeven-section" class="section-title">Break-Even Analysis Explained</h2>
+<p>The break-even point is the moment when the total cost of buying becomes less than the total cost of renting. In Dallas, this typically occurs between <strong>4 and 6 years</strong>, depending on your specific numbers. Here's how the timeline works:</p>
+<div class="break-even-visual">
+<div class="be-step">
+<div class="num">1</div>
+<h4>Years 1–3: Renting Wins</h4>
+<p>High closing costs, mostly interest payments, and slow equity growth mean renting is cheaper. Your break-even hasn't arrived.</p>
+</div>
+<div class="be-step">
+<div class="num">2</div>
+<h4>Years 4–6: The Crossover</h4>
+<p>Accumulated equity, home appreciation (4.5%/yr), and rising rents converge. Buying costs equal renting costs around year 5 in Dallas.</p>
+</div>
+<div class="be-step">
+<div class="num">3</div>
+<h4>Years 7+: Buying Wins</h4>
+<p>Fixed mortgage payments stay constant while rents keep climbing. Your equity accelerates, and net worth gap widens dramatically.</p>
+</div>
+</div>
+
+<div class="scenario-box">
+<h3>📊 5-Year Scenario: Dallas Homebuyer vs Renter</h3>
+<p style="font-size:.9rem;margin-bottom:.5rem"><strong>Buyer:</strong> Purchases $350,000 home, 20% down ($70,000), 6.75% rate, 30-year fixed. Total housing costs over 5 years: ~$170,340 (payments) + $70,000 (down payment) = $240,340. Home value grows to ~$436,000. Equity: ~$108,000 (appreciation + principal paid). <strong>Net cost: ~$132,340.</strong></p>
+<p style="font-size:.9rem"><strong>Renter:</strong> Pays $1,750/month initially, increasing 3% annually. Total rent over 5 years: ~$111,480. Down payment invested at 7% return grows to ~$98,200. <strong>Net cost: ~$13,280.</strong> However, the renter owns $0 in real estate equity and faces a rent of $2,028/month in year 5.</p>
+</div>
+
+<div class="scenario-box">
+<h3>📊 10-Year Scenario: The Long Game</h3>
+<p style="font-size:.9rem;margin-bottom:.5rem"><strong>Buyer:</strong> Total housing costs over 10 years: ~$340,680. Home value: ~$543,000. Equity: ~$263,000. <strong>Net position: +$202,320 in equity vs. total costs.</strong></p>
+<p style="font-size:.9rem"><strong>Renter:</strong> Total rent paid over 10 years: ~$240,720. Invested down payment at 7%: ~$137,700. <strong>Net position: –$102,920 in housing costs, plus $137,700 in investments = +$34,780.</strong> The homeowner is ahead by approximately $167,540 at the 10-year mark.</p>
+</div>
+
+<p>The takeaway is clear: if you plan to stay in Dallas for more than 5 years, buying almost always wins financially—even accounting for high property taxes and the opportunity cost of your down payment.</p>
+</section>
+
+<section class="card content-section" aria-labelledby="faq-heading">
+<h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+<div class="accordion" id="faqAccordion">
+<div class="accordion-item">
+<button class="accordion-btn" type="button" aria-expanded="false"><span>Is it cheaper to rent or buy in Dallas in 2026?</span><span class="icon">+</span></button>
+<div class="accordion-content"><p>It depends on your timeline and financial situation. Buying typically becomes cheaper than renting in Dallas after 4–6 years due to equity building and fixed mortgage payments, while rents increase annually by 3–5%. Use the calculator above to compare your specific scenario. If you plan to stay in Dallas for fewer than 3 years, renting is usually the more economical choice due to closing costs and transaction fees associated with buying and selling.</p></div>
+</div>
+<div class="accordion-item">
+<button class="accordion-btn" type="button" aria-expanded="false"><span>What is the average mortgage payment in Dallas?</span><span class="icon">+</span></button>
+<div class="accordion-content"><p>As of 2026, the average monthly mortgage payment in Dallas is approximately $2,100–$2,400 for a median-priced home of $350,000 with a 20% down payment at current interest rates, including property taxes and insurance. This can vary significantly based on your credit score, down payment amount, and specific location within the DFW metroplex. Homes in premium neighborhoods like Highland Park or University Park will have higher payments.</p></div>
+</div>
+<div class="accordion-item">
+<button class="accordion-btn" type="button" aria-expanded="false"><span>What is the property tax rate in Dallas, Texas?</span><span class="icon">+</span></button>
+<div class="accordion-content"><p>Dallas County property tax rates range from 1.8% to 2.3% of assessed value depending on the specific taxing jurisdictions (city, county, school district, and special districts). The average effective rate is approximately 2.0%, which is significantly higher than the national average of 1.1%. However, Texas homeowners benefit from the homestead exemption, which excludes $100,000 of value from school district taxes, plus additional exemptions from the city and county.</p></div>
+</div>
+<div class="accordion-item">
+<button class="accordion-btn" type="button" aria-expanded="false"><span>How much do you need for a down payment in Dallas?</span><span class="icon">+</span></button>
+<div class="accordion-content"><p>Conventional loans in Dallas typically require 5–20% down. FHA loans require as little as 3.5%. For a $350,000 home, that ranges from $12,250 (FHA) to $70,000 (20% conventional). A 20% down payment eliminates Private Mortgage Insurance (PMI), saving you $150–$250 monthly. Several Dallas-area programs, including the Dallas Homebuyer Assistance Program, offer down payment assistance for qualifying first-time buyers.</p></div>
+</div>
+<div class="accordion-item">
+<button class="accordion-btn" type="button" aria-expanded="false"><span>Is Dallas a good place to buy a home in 2026?</span><span class="icon">+</span></button>
+<div class="accordion-content"><p>Dallas remains one of the top U.S. metros for homebuying due to strong job growth from corporate relocations, no state income tax, relatively affordable median prices compared to coastal cities, and consistent 3–5% annual appreciation. Population growth of 100,000+ annually continues to fuel demand. The diverse economy spanning tech, finance, healthcare, and logistics provides stability against sector-specific downturns.</p></div>
+</div>
+<div class="accordion-item">
+<button class="accordion-btn" type="button" aria-expanded="false"><span>What is the break-even point for buying vs renting in Dallas?</span><span class="icon">+</span></button>
+<div class="accordion-content"><p>The typical break-even point in Dallas is 4–6 years. Before this point, transaction costs (closing costs, moving expenses) and the fact that early mortgage payments are heavily interest-weighted make renting more economical. After this point, equity accumulation, home appreciation, and the fixed nature of mortgage payments (vs. rising rents) make buying the better financial choice. Use the calculator above to estimate your personal break-even point.</p></div>
+</div>
+<div class="accordion-item">
+<button class="accordion-btn" type="button" aria-expanded="false"><span>What are closing costs in Dallas, Texas?</span><span class="icon">+</span></button>
+<div class="accordion-content"><p>Closing costs in Dallas typically range from 2–5% of the purchase price. For a $350,000 home, expect $7,000–$17,500 in closing costs including title insurance, appraisal fees, lender origination fees, survey, escrow deposits, and prepaid property taxes. In Texas, sellers commonly pay the owner's title insurance policy, which can reduce buyer costs. Negotiating seller concessions for closing costs is also common in balanced or buyer-favorable markets.</p></div>
+</div>
+<div class="accordion-item">
+<button class="accordion-btn" type="button" aria-expanded="false"><span>Does Dallas have a homestead exemption?</span><span class="icon">+</span></button>
+<div class="accordion-content"><p>Yes. Texas offers a mandatory $100,000 homestead exemption for school district taxes on primary residences. Dallas County and the City of Dallas offer additional local exemptions, often 20% of assessed value. Combined, these exemptions can reduce your taxable value significantly, lowering annual property tax bills by $1,500–$3,000 or more. You must file a homestead exemption application with the Dallas Central Appraisal District within one year of occupying the home as your primary residence.</p></div>
+</div>
+</div>
+</section>
+
+<div class="takeaway-box">
+<h3>🔑 Key Takeaway for Dallas Residents</h3>
+<p>If you're planning to stay in Dallas for 5 or more years, have stable income, and can afford a 10–20% down payment, buying is almost always the better long-term financial decision. You'll build equity in a consistently appreciating market, lock in fixed housing costs while rents continue to rise, and benefit from Texas's lack of state income tax. However, if your timeline is under 3 years, renting preserves flexibility and avoids the transaction costs that erode short-term homeownership gains. Use the calculator above to run your exact numbers.</p>
+</div>
+
+<div class="disclaimer">
+<h3>⚠️ Disclaimer</h3>
+<p>This calculator is provided for informational and educational purposes only. It does not constitute financial, legal, or real estate advice. Results are estimates based on the inputs you provide and standard amortization formulas. Actual mortgage payments, taxes, insurance premiums, and total costs may differ. Consult a licensed mortgage professional, financial advisor, or real estate attorney before making any housing decisions. Property tax rates, home values, and market conditions are based on publicly available data from the Dallas Central Appraisal District, U.S. Census Bureau, Zillow, and Realtor.com as of Q4 2025.</p>
+<p style="margin-top:.5rem"><strong>Data Sources:</strong> Dallas Central Appraisal District (DCAD), U.S. Bureau of Labor Statistics, Zillow Home Value Index, Texas Comptroller of Public Accounts, Federal Reserve Economic Data (FRED).</p>
+<p style="margin-top:.5rem"><strong>Author:</strong> Dallas Housing Research Team</p>
+<p class="updated-date"><strong>Last Updated:</strong> January 2026</p>
+</div>
+
+<!-- Ad Slot Bottom -->
+<div class="ad-slot" aria-hidden="true">Ad Slot — Bottom of Page</div>
+</main>
+
+<footer>
+<div class="container">
+<p>&copy; 2026 Dallas Mortgage Calculator. All rights reserved.</p>
+<p style="margin-top:.25rem">Dallas, Texas | Rent vs Buy Analysis Tool</p>
+</div>
+</footer>
+
+<script src="validation.js" defer></script>
+<script src="calculation.js" defer></script>
+<script src="main.js" defer></script>
+</body>
+</html>
